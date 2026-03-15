@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Restaurant } from "../../types/restaurant";
+import { getBestDeal } from "../../utils/dealUtils";
 import "./RestaurantCard.css"
 
 interface Props {
@@ -7,12 +8,13 @@ interface Props {
 }
 
 const RestaurantCard = ({restaurant}: Props) => {
-    const { name, cuisines, imageLink, deals, address1, suburb} = restaurant;
+    const { name, cuisines, imageLink, address1, suburb} = restaurant;
 
-    const bestDeal = deals.length > 0 ? Math.max(...deals.map((d) => Number(d.discount))) : null;
+    const bestDeal = getBestDeal(restaurant.deals);
     return (
         <Link 
             to={`/restaurant/${restaurant.objectId}`}
+            state={{restaurant}}
             className="restaurant-card">
             <div className="restaurant-card-image">
                 <img 

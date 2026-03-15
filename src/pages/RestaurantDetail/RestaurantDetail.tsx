@@ -1,24 +1,44 @@
-import { useParams } from "react-router-dom";
-import { useRestaurants } from "../../hooks/useRestaurantData";
-
+import { useLocation,useNavigate } from "react-router-dom";
+import type { Restaurant } from "../../types/restaurant";
 import "./RestaurantDetail.css"
 
 const RestaurantDetail = () => {
-    const {id} = useParams();
-    const {restaurants} = useRestaurants()
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const restaurant = restaurants.find(restaurant => restaurant.objectId === id);
+    const restaurant = location.state?.restaurant as Restaurant;
     if(!restaurant){
         return (<p>Restaurant not found!</p>)
     }
 
     return (
         <div className="restaurant-detail">
+            <button
+                className="back-button"
+                onClick={() => navigate(-1)}
+            >
+                Back
+            </button>
             <img 
                 src={restaurant.imageLink}
                 alt={restaurant.name}
                 className="restaurant-detail-image"
             />
+            <div className="restaurant-actions">
+                <div className="action-item">
+                    Menu
+                </div>
+                <div className="action-item">
+                    Call
+                </div>
+                <div className="action-item">
+                    Location
+                </div>
+                <div className="action-item">
+                    Favaourite
+                </div>
+            </div>
+            <hr className="restaurant-detail-hr"/>
             <h1 className="restaurant-detail-name">
                 {restaurant.name}
             </h1>

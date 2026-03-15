@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid white;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-icon {
+    font-size: 16px;
+    cursor: pointer;
+}
+.navbar-center {
+    font-size: 18px;
+    text-decoration: none;
+}
+.navbar-center.active {
+    color: #ff3366;
+}

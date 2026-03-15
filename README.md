@@ -27,12 +27,12 @@ https://eccdn.com.au/misc/challengedata.json
 ### Restaurant Detail Screen
 - [x] Navigate to restaurant detail screen
 - [x] Display deal cards
-- [ ] Sort deals by highest discount
+- [x] Sort deals by highest discount
 
 ### Navigation
-- [ ] Implement routing
-- [ ] Back navigation to list screen
+- [x] Implement routing
+- [x] Back navigation to list screen
 
 ### UI
-- [ ] Mobile layout
-- [ ] Responsive desktop layout
+- [x] Mobile layout
+- [x] Responsive desktop layout

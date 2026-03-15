@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { fetchRestaurants } from "../services/restaurants";
 import type { Restaurant } from "../types/restaurant";
+import { getBestDeal } from "../utils/dealUtils";
 
 export const useRestaurants = () => {
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
@@ -34,8 +35,8 @@ export const useRestaurants = () => {
     })
 
     const sorted = filtered.sort((a,b) => {
-      const bestDealA = Math.max(...a.deals.map((d) => Number(d.discount)))
-      const bestDealB = Math.max(...b.deals.map((d) => Number(d.discount)))
+      const bestDealA = getBestDeal(a.deals) ?? 0
+      const bestDealB = getBestDeal(b.deals) ?? 0
       
       return bestDealB - bestDealA
     })
