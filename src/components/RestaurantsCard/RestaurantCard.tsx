@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Restaurant } from "../../types/restaurant";
 import "./RestaurantCard.css"
 
@@ -10,7 +11,9 @@ const RestaurantCard = ({restaurant}: Props) => {
 
     const bestDeal = deals.length > 0 ? Math.max(...deals.map((d) => Number(d.discount))) : null;
     return (
-        <div className="restaurant-card">
+        <Link 
+            to={`/restaurant/${restaurant.objectId}`}
+            className="restaurant-card">
             <div className="restaurant-card-image">
                 <img 
                     src={imageLink}
@@ -33,7 +36,7 @@ const RestaurantCard = ({restaurant}: Props) => {
                     {cuisines.join(" • ")}
                 </p>
             </div>
-        </div>
+        </Link>
     )
 
 }

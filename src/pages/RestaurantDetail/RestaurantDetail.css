@@ -1,0 +1,71 @@
+.restaurant-detail {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.restaurant-detail-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.restaurant-detail-name {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.restaurant-detail-cuisine {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.restaurant-detail-hr {
+    margin: 20px 0;
+}
+
+.restaurant-detail-info {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.restaurant-hours {
+  font-weight: 600;
+}
+
+.restaurant-address {
+  color: #666;
+}
+
+.restaurant-detail-deals {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.deal-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.deal-discount {
+    font-weight: 600;
+    color: #ff3366;
+}
+.redeem-button {
+  background: white;
+  color: #ff3366;
+  border: 1px solid #ff3366;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.redeem-button:hover {
+  opacity: 0.9;
+}
