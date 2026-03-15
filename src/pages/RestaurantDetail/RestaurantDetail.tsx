@@ -7,6 +7,9 @@ const RestaurantDetail = () => {
     const location = useLocation();
 
     const restaurant = location.state?.restaurant as Restaurant;
+    const sortedDeals = [...restaurant.deals].sort(
+        (a, b) => Number(b.discount) - Number(a.discount)
+    )
     if(!restaurant){
         return (<p>Restaurant not found!</p>)
     }
@@ -57,14 +60,15 @@ const RestaurantDetail = () => {
             </div>
             <hr className="restaurant-detail-hr"/>
             <div className="restaurant-detail-deals">
-                {restaurant.deals.map((deal) => (
+                {sortedDeals.map((deal) => (
                     <div key={deal.objectId} className="deal-card">
-                        <span className="deal-discount">
-                            {deal.discount}% OFF
-                        </span>
-                        <button className="redeem-button">
-                            Redeem
-                        </button>
+                    <span className="deal-discount">
+                        {deal.discount}% OFF
+                    </span>
+
+                    <button className="redeem-button">
+                        Redeem
+                    </button>
                     </div>
                 ))}
             </div>
