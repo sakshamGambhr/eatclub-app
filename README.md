@@ -14,8 +14,8 @@ https://eccdn.com.au/misc/challengedata.json
 
 ### Project Setup
 - [x] Create React project
-- [ ] Setup folder structure
-- [ ] Setup Git repository
+- [x] Setup folder structure
+- [x] Setup Git repository
 
 ### Restaurant List Screen
 - [ ] Fetch restaurants from API
