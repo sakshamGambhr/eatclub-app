@@ -38,7 +38,7 @@ const RestaurantDetail = () => {
                     Location
                 </div>
                 <div className="action-item">
-                    Favaourite
+                    Favourite
                 </div>
             </div>
             <hr className="restaurant-detail-hr"/>

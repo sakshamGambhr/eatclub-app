@@ -19,7 +19,7 @@ const RestaurantList = () => {
 
       {restaurants.length === 0 ? (
         <div className="empty-state">
-          No restaurants available"
+          No restaurants available
         </div>
       ) : (
         <div className="restaurant-list">
