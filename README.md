@@ -18,7 +18,7 @@ https://eccdn.com.au/misc/challengedata.json
 - [x] Setup Git repository
 
 ### Restaurant List Screen
-- [ ] Fetch restaurants from API
+- [x] Fetch restaurants from API
 - [ ] Display restaurant cards
 - [ ] Sort restaurants by best deals
 - [ ] Search filter by restaurant name
