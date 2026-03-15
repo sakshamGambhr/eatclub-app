@@ -1,4 +1,7 @@
 import { useRestaurants } from "../../hooks/useRestaurantData";
+import RestaurantCard from "../../components/RestaurantsCard/RestaurantCard";
+
+import "./RestaurantList.css";
 
 const RestaurantList = () => {
   const { restaurants, loading, error } = useRestaurants();
@@ -7,9 +10,12 @@ const RestaurantList = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
+    <div className="restaurant-list">
       {restaurants.map((restaurant) => (
-        <div key={restaurant.objectId}>{restaurant.name}</div>
+        <RestaurantCard 
+          key={restaurant.objectId}
+          restaurant={restaurant}
+        />
       ))}
     </div>
   );

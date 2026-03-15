@@ -19,7 +19,7 @@ https://eccdn.com.au/misc/challengedata.json
 
 ### Restaurant List Screen
 - [x] Fetch restaurants from API
-- [ ] Display restaurant cards
+- [x] Display restaurant cards
 - [ ] Sort restaurants by best deals
 - [ ] Search filter by restaurant name
 - [ ] Filter by cuisines
